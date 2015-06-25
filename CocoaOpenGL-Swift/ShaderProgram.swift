@@ -33,6 +33,10 @@ class ShaderProgram {
         program = glCreateProgram()
     }
 
+    deinit {
+        glDeleteProgram(program)
+    }
+
     func attachShader(file: String, withType type: GLint) {
         if let shader = compileShader(file, withType: GLenum(type)) {
             glAttachShader(program, shader)
