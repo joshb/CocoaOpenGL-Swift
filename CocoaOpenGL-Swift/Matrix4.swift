@@ -56,6 +56,33 @@ struct Matrix4 {
 
         return matrix
     }
+
+    static func rotationMatrix(#angle: Float, x: Float, y: Float, z: Float) -> Matrix4 {
+        var matrix = Matrix4()
+
+        let c = cosf(angle)
+        let ci = 1.0 - c
+        let s = sinf(angle)
+
+        let xy = x * y * ci
+        let xz = x * z * ci
+        let yz = y * z * ci
+        let xs = x * s
+        let ys = y * s
+        let zs = z * s
+
+        matrix.matrix[0] = x * x * ci + c
+        matrix.matrix[1] = xy + zs
+        matrix.matrix[2] = xz - ys
+        matrix.matrix[4] = xy - xz
+        matrix.matrix[5] = y * y * ci + c
+        matrix.matrix[6] = yz + xs
+        matrix.matrix[8] = xz + ys
+        matrix.matrix[9] = yz - xs
+        matrix.matrix[10] = z * z * ci + c
+
+        return matrix
+    }
 }
 
 func * (left: Matrix4, right: Matrix4) -> Matrix4 {

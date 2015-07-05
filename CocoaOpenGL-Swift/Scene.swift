@@ -44,6 +44,8 @@ class Scene {
 
     private var normalmap: Texture?
     private var renderable: Renderable
+
+    private var cameraRotation: Float = 0.0
     private var cameraPosition: [Float] = [0.0, 0.0, 4.0]
 
     init() {
@@ -66,8 +68,8 @@ class Scene {
 
     func render(projectionMatrix: Matrix4) {
         let translationMatrix = Matrix4.translationMatrix(x: -cameraPosition[0], y: -cameraPosition[1], z: -cameraPosition[2])
-        let rotationMatrix = Matrix4()
-        let modelviewMatrix = rotationMatrix * translationMatrix
+        let rotationMatrix = Matrix4.rotationMatrix(angle: cameraRotation, x: 0.0, y: -1.0, z: 0.0)
+        let modelviewMatrix = translationMatrix * rotationMatrix
 
         // Enable the program and set uniform variables.
         program.use()
@@ -95,5 +97,11 @@ class Scene {
             lightPosition[i * 3 + 1] = cosf(r) * sinf(r)
             lightPosition[i * 3 + 2] = sinf(r) * radius
         }
+
+        // Update the camera position.
+        cameraRotation -= (M_PI_F / 16.0) * secondsElapsed
+        cameraPosition[0] = sinf(cameraRotation) * 4.0
+        cameraPosition[1] = 0.0
+        cameraPosition[2] = cosf(cameraRotation) * 4.0
     }
 }
