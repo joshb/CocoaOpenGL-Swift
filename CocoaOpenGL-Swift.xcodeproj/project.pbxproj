@@ -18,6 +18,8 @@
 		0D1234AD1B2D1AD200FF27B2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D1234AB1B2D1AD200FF27B2 /* MainMenu.xib */; };
 		0D1234C31B2D1B8600FF27B2 /* MyNSOpenGLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1234C21B2D1B8600FF27B2 /* MyNSOpenGLView.swift */; };
 		0D1234C51B2D268500FF27B2 /* ShaderProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1234C41B2D268500FF27B2 /* ShaderProgram.swift */; };
+		0D2202301B48BD4C008181EF /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D22022F1B48BD4C008181EF /* Texture.swift */; };
+		0D2202321B48C3B2008181EF /* normalmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D2202311B48C3B2008181EF /* normalmap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		0D1234AC1B2D1AD200FF27B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0D1234C21B2D1B8600FF27B2 /* MyNSOpenGLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNSOpenGLView.swift; sourceTree = "<group>"; };
 		0D1234C41B2D268500FF27B2 /* ShaderProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderProgram.swift; sourceTree = "<group>"; };
+		0D22022F1B48BD4C008181EF /* Texture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
+		0D2202311B48C3B2008181EF /* normalmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normalmap.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +70,11 @@
 		0D1234A41B2D1AD100FF27B2 /* CocoaOpenGL-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				0D2202311B48C3B2008181EF /* normalmap.png */,
 				0D034C191B3C4AA100B8B587 /* shader.fp */,
 				0D034C1A1B3C4AA100B8B587 /* shader.vp */,
 				0D1234A71B2D1AD100FF27B2 /* AppDelegate.swift */,
+				0D22022F1B48BD4C008181EF /* Texture.swift */,
 				0D1234A91B2D1AD200FF27B2 /* Images.xcassets */,
 				0D1234AB1B2D1AD200FF27B2 /* MainMenu.xib */,
 				0D1234A51B2D1AD100FF27B2 /* Supporting Files */,
@@ -151,6 +157,7 @@
 				0D1234AA1B2D1AD200FF27B2 /* Images.xcassets in Resources */,
 				0D034C1B1B3C4AA100B8B587 /* shader.fp in Resources */,
 				0D1234AD1B2D1AD200FF27B2 /* MainMenu.xib in Resources */,
+				0D2202321B48C3B2008181EF /* normalmap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D034C121B3BA0FD00B8B587 /* Scene.swift in Sources */,
+				0D2202301B48BD4C008181EF /* Texture.swift in Sources */,
 				0D034C161B3BA41600B8B587 /* Cylinder.swift in Sources */,
 				0D1234C31B2D1B8600FF27B2 /* MyNSOpenGLView.swift in Sources */,
 				0D1234C51B2D268500FF27B2 /* ShaderProgram.swift in Sources */,

@@ -30,6 +30,7 @@ const vec3 AMBIENT = vec3(0.1, 0.1, 0.1);
 const float MAX_DIST = 2.5;
 const float MAX_DIST_SQUARED = MAX_DIST * MAX_DIST;
 
+uniform sampler2D normalmap;
 uniform vec3 lightColor[NUM_LIGHTS];
 
 in vec2 fragmentTexCoords;
@@ -46,7 +47,7 @@ main()
 	vec3 specular = vec3(0.0, 0.0, 0.0);
 
 	// get the fragment normal and camera direction
-	vec3 fragmentNormal = vec3(0.0, 0.0, 1.0);
+	vec3 fragmentNormal = (texture(normalmap, fragmentTexCoords).rgb * 2.0) - 1.0;
 	vec3 normal = normalize(fragmentNormal);
 	vec3 cameraDir = normalize(cameraVector);
 

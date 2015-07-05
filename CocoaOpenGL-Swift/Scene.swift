@@ -42,6 +42,7 @@ class Scene {
                                        0.0, 0.0, 1.0]
     private var lightRotation: Float = 0.0
 
+    private var normalmap: Texture?
     private var renderable: Renderable
     private var cameraPosition: [Float] = [0.0, 0.0, 4.0]
 
@@ -59,6 +60,7 @@ class Scene {
         programLightPositionLocation = program.getUniformLocation("lightPosition")!
         programLightColorLocation = program.getUniformLocation("lightColor")!
 
+        normalmap = Texture.loadFromFile("normalmap.png")
         renderable = Cylinder(program: program, numberOfDivisions: 36)
     }
 
