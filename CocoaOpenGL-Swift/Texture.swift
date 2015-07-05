@@ -27,30 +27,18 @@ import Foundation
 import GLKit
 
 class Texture {
-    private var _textureId: GLuint
-    private var _width: UInt
-    private var _height: UInt
-
-    var textureId: GLuint {
-        return _textureId
-    }
-
-    var width: UInt {
-        return _width
-    }
-
-    var height: UInt {
-        return _height
-    }
+    private(set) var textureId: GLuint
+    private(set) var width: UInt
+    private(set) var height: UInt
 
     init(textureId: GLuint, width: UInt, height: UInt) {
-        _textureId = textureId
-        _width = width
-        _height = height
+        self.textureId = textureId
+        self.width = width
+        self.height = height
     }
 
     deinit {
-        glDeleteTextures(1, &_textureId)
+        glDeleteTextures(1, &textureId)
     }
 
     static func loadFromFile(filePath: String) -> Texture? {
