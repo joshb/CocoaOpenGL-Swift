@@ -11,8 +11,8 @@
 		0D034C141B3BA3C900B8B587 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D034C131B3BA3C900B8B587 /* Renderable.swift */; };
 		0D034C161B3BA41600B8B587 /* Cylinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D034C151B3BA41600B8B587 /* Cylinder.swift */; };
 		0D034C181B3BADAB00B8B587 /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D034C171B3BADAB00B8B587 /* Matrix4.swift */; };
-		0D034C1B1B3C4AA100B8B587 /* shader.fp in Resources */ = {isa = PBXBuildFile; fileRef = 0D034C191B3C4AA100B8B587 /* shader.fp */; };
-		0D034C1C1B3C4AA100B8B587 /* shader.vp in Resources */ = {isa = PBXBuildFile; fileRef = 0D034C1A1B3C4AA100B8B587 /* shader.vp */; };
+		0D034C1B1B3C4AA100B8B587 /* shader.fs in Resources */ = {isa = PBXBuildFile; fileRef = 0D034C191B3C4AA100B8B587 /* shader.fs */; };
+		0D034C1C1B3C4AA100B8B587 /* shader.vs in Resources */ = {isa = PBXBuildFile; fileRef = 0D034C1A1B3C4AA100B8B587 /* shader.vs */; };
 		0D1234A81B2D1AD100FF27B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1234A71B2D1AD100FF27B2 /* AppDelegate.swift */; };
 		0D1234AA1B2D1AD200FF27B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D1234A91B2D1AD200FF27B2 /* Images.xcassets */; };
 		0D1234AD1B2D1AD200FF27B2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D1234AB1B2D1AD200FF27B2 /* MainMenu.xib */; };
@@ -27,8 +27,8 @@
 		0D034C131B3BA3C900B8B587 /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
 		0D034C151B3BA41600B8B587 /* Cylinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cylinder.swift; sourceTree = "<group>"; };
 		0D034C171B3BADAB00B8B587 /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4.swift; sourceTree = "<group>"; };
-		0D034C191B3C4AA100B8B587 /* shader.fp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shader.fp; sourceTree = "<group>"; };
-		0D034C1A1B3C4AA100B8B587 /* shader.vp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shader.vp; sourceTree = "<group>"; };
+		0D034C191B3C4AA100B8B587 /* shader.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
+		0D034C1A1B3C4AA100B8B587 /* shader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
 		0D1234A21B2D1AD100FF27B2 /* CocoaOpenGL-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CocoaOpenGL-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1234A61B2D1AD100FF27B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D1234A71B2D1AD100FF27B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,8 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				0D2202311B48C3B2008181EF /* normalmap.png */,
-				0D034C191B3C4AA100B8B587 /* shader.fp */,
-				0D034C1A1B3C4AA100B8B587 /* shader.vp */,
+				0D034C191B3C4AA100B8B587 /* shader.fs */,
+				0D034C1A1B3C4AA100B8B587 /* shader.vs */,
 				0D1234A71B2D1AD100FF27B2 /* AppDelegate.swift */,
 				0D22022F1B48BD4C008181EF /* Texture.swift */,
 				0D1234A91B2D1AD200FF27B2 /* Images.xcassets */,
@@ -153,9 +153,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D034C1C1B3C4AA100B8B587 /* shader.vp in Resources */,
+				0D034C1C1B3C4AA100B8B587 /* shader.vs in Resources */,
 				0D1234AA1B2D1AD200FF27B2 /* Images.xcassets in Resources */,
-				0D034C1B1B3C4AA100B8B587 /* shader.fp in Resources */,
+				0D034C1B1B3C4AA100B8B587 /* shader.fs in Resources */,
 				0D1234AD1B2D1AD200FF27B2 /* MainMenu.xib in Resources */,
 				0D2202321B48C3B2008181EF /* normalmap.png in Resources */,
 			);

@@ -51,8 +51,8 @@ class Scene {
     init() {
         // Create the program, attach shaders, and link.
         program = ShaderProgram()
-        program.attachShader("shader.vp", withType: GL_VERTEX_SHADER)
-        program.attachShader("shader.fp", withType: GL_FRAGMENT_SHADER)
+        program.attachShader("shader.vs", withType: GL_VERTEX_SHADER)
+        program.attachShader("shader.fs", withType: GL_FRAGMENT_SHADER)
         program.link()
 
         // Get uniform locations.
