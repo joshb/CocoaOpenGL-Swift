@@ -33,9 +33,9 @@ struct Matrix4 {
         0.0, 0.0, 0.0, 1.0
     ]
 
-    static func perspectiveMatrix(#fov: Float, aspect: Float, near: Float, far: Float) -> Matrix4 {
+    static func perspectiveMatrix(fov fov: Float, aspect: Float, near: Float, far: Float) -> Matrix4 {
         var matrix = Matrix4()
-        var f = 1.0 / tanf(fov / 2.0)
+        let f = 1.0 / tanf(fov / 2.0)
 
         matrix.matrix[0] = f / aspect
         matrix.matrix[5] = f
@@ -47,7 +47,7 @@ struct Matrix4 {
         return matrix
     }
 
-    static func translationMatrix(#x: Float, y: Float, z: Float) -> Matrix4 {
+    static func translationMatrix(x x: Float, y: Float, z: Float) -> Matrix4 {
         var matrix = Matrix4()
 
         matrix.matrix[12] = x
@@ -57,7 +57,7 @@ struct Matrix4 {
         return matrix
     }
 
-    static func rotationMatrix(#angle: Float, x: Float, y: Float, z: Float) -> Matrix4 {
+    static func rotationMatrix(angle angle: Float, x: Float, y: Float, z: Float) -> Matrix4 {
         var matrix = Matrix4()
 
         let c = cosf(angle)

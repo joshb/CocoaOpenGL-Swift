@@ -44,10 +44,10 @@ class MyNSOpenGLView: NSOpenGLView
         ]
 
         let format = NSOpenGLPixelFormat(attributes: attr)
-        let context = NSOpenGLContext(format: format, shareContext: nil)
+        let context = NSOpenGLContext(format: format!, shareContext: nil)
 
         self.openGLContext = context
-        self.openGLContext.makeCurrentContext()
+        self.openGLContext?.makeCurrentContext()
     }
 
     override func reshape() {
@@ -66,7 +66,7 @@ class MyNSOpenGLView: NSOpenGLView
         }
 
         // Create new tracking area.
-        let options = NSTrackingAreaOptions.MouseMoved | NSTrackingAreaOptions.ActiveWhenFirstResponder
+        let options: NSTrackingAreaOptions = [NSTrackingAreaOptions.MouseMoved, NSTrackingAreaOptions.ActiveWhenFirstResponder]
         trackingArea = NSTrackingArea(rect: frame, options: options, owner: self, userInfo: nil)
     }
 
@@ -83,6 +83,6 @@ class MyNSOpenGLView: NSOpenGLView
 
     func flush()
     {
-        self.openGLContext.flushBuffer()
+        self.openGLContext?.flushBuffer()
     }
 }

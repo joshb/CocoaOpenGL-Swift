@@ -89,9 +89,8 @@ class ShaderProgram {
     private func compileShader(file: String, withType type: GLenum) -> GLuint? {
         // Load the shader source.
         let path = NSBundle.mainBundle().resourcePath! + "/" + file
-        let source = String(contentsOfFile: path,
-                            encoding: NSASCIIStringEncoding,
-                            error: nil)
+        let source = try? String(contentsOfFile: path,
+                            encoding: NSASCIIStringEncoding)
         if source == nil {
             NSLog("Unable to load %@", file)
             return nil
@@ -102,7 +101,7 @@ class ShaderProgram {
 
         // Compile the shader.
         let shader = glCreateShader(type)
-        var length = GLint(count(source!))
+        var length = GLint((source!).characters.count)
         glShaderSource(shader, 1, &glcSource, &length)
         glCompileShader(shader)
 

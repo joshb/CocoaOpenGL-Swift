@@ -48,7 +48,7 @@ class Texture {
             return nil
         }
 
-        let image = CGImageCreateWithPNGDataProvider(dataProvider!, nil, false, kCGRenderingIntentDefault)
+        let image = CGImageCreateWithPNGDataProvider(dataProvider!, nil, false, CGColorRenderingIntent.RenderingIntentDefault)
         let imageData = CGDataProviderCopyData(CGImageGetDataProvider(image))
 
         // Get the image data, dimensions, and number of components.
