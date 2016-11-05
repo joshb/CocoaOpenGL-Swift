@@ -32,11 +32,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var view: MyNSOpenGLView!
 
-    private var timer: NSTimer!
-    private var scene: Scene!
-    private var ticks: UInt64 = AppDelegate.getTicks()
+    fileprivate var timer: Timer!
+    fileprivate var scene: Scene!
+    fileprivate var ticks: UInt64 = AppDelegate.getTicks()
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Do some GL setup.
         glClearColor(0.0, 0.0, 0.0, 0.0)
         glClearDepth(1.0)
@@ -50,19 +50,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         scene = Scene()
 
         // Create a timer to render.
-        timer = NSTimer(timeInterval: 1.0 / 60.0,
+        timer = Timer(timeInterval: 1.0 / 60.0,
                         target: self,
-                        selector: "timerFireMethod:",
+                        selector: #selector(AppDelegate.timerFireMethod(_:)),
                         userInfo: nil,
                         repeats: true)
-        NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
+        RunLoop.current.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
     }
 
-    func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
     }
 
-    func timerFireMethod(sender: NSTimer!) {
+    func timerFireMethod(_ sender: Timer!) {
         // Render the scene.
         glClear(GLbitfield(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT))
         scene.render(view.projectionMatrix)
@@ -76,7 +76,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         scene.cycle(secondsElapsed)
     }
 
-    private class func getTicks() -> UInt64 {
+    fileprivate class func getTicks() -> UInt64 {
         var t = timeval()
         gettimeofday(&t, nil)
         return UInt64(t.tv_sec * 1000) + UInt64(t.tv_usec / 1000)

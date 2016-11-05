@@ -29,9 +29,9 @@ import GLKit
 let M_PI_F = Float(M_PI)
 
 class Cylinder: Renderable {
-    private var numVertices = 0
-    private var vertexArrayId: GLuint = 0
-    private var bufferIds = [GLuint](count: 5, repeatedValue: 0)
+    fileprivate var numVertices = 0
+    fileprivate var vertexArrayId: GLuint = 0
+    fileprivate var bufferIds = [GLuint](repeating: 0, count: 5)
 
     init(program: ShaderProgram, numberOfDivisions divisions: Int) {
         let divisionsf = Float(divisions)
@@ -42,11 +42,11 @@ class Cylinder: Renderable {
 
         // Generate vertex data.
         //let p = UnsafeMutablePointer<Float> (malloc(sizeof(Float) * size))
-        var p = [Float](count: size, repeatedValue: 0.0)
-        var tc = [Float](count: tcSize, repeatedValue: 0.0)
-        var t = [Float](count: size, repeatedValue: 0.0)
-        var b = [Float](count: size, repeatedValue: 0.0)
-        var n = [Float](count: size, repeatedValue: 0.0)
+        var p = [Float](repeating: 0.0, count: size)
+        var tc = [Float](repeating: 0.0, count: tcSize)
+        var t = [Float](repeating: 0.0, count: size)
+        var b = [Float](repeating: 0.0, count: size)
+        var n = [Float](repeating: 0.0, count: size)
         for i in 0...divisions {
             let r1 = ((M_PI_F * 2.0) / divisionsf) * Float(i)
             let r2 = r1 + M_PI_F / 2.0
@@ -110,12 +110,12 @@ class Cylinder: Renderable {
         glBindVertexArray(vertexArrayId)
 
         // Create buffers.
-        bufferIds = [GLuint](count: 5, repeatedValue: 0)
+        bufferIds = [GLuint](repeating: 0, count: 5)
         glGenBuffers(5, &bufferIds)
 
         // Create position buffer.
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), bufferIds[0])
-        glBufferData(GLenum(GL_ARRAY_BUFFER), sizeof(Float) * size, p, GLenum(GL_STATIC_DRAW))
+        glBufferData(GLenum(GL_ARRAY_BUFFER), MemoryLayout<Float>.size * size, p, GLenum(GL_STATIC_DRAW))
 
         // Create position attribute array.
         glEnableVertexAttribArray(vertexPositionLocation)
@@ -123,7 +123,7 @@ class Cylinder: Renderable {
 
         // Create texture coordinates buffer.
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), bufferIds[1])
-        glBufferData(GLenum(GL_ARRAY_BUFFER), sizeof(Float) * tcSize, tc, GLenum(GL_STATIC_DRAW))
+        glBufferData(GLenum(GL_ARRAY_BUFFER), MemoryLayout<Float>.size * tcSize, tc, GLenum(GL_STATIC_DRAW))
 
         // Create texture coordinates attribute array.
         glEnableVertexAttribArray(vertexTexCoordsLocation)
@@ -131,7 +131,7 @@ class Cylinder: Renderable {
 
         // Create tangent buffer.
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), bufferIds[2])
-        glBufferData(GLenum(GL_ARRAY_BUFFER), sizeof(Float) * size, t, GLenum(GL_STATIC_DRAW))
+        glBufferData(GLenum(GL_ARRAY_BUFFER), MemoryLayout<Float>.size * size, t, GLenum(GL_STATIC_DRAW))
 
         // Create tangent attribute array.
         glEnableVertexAttribArray(vertexTangentLocation)
@@ -139,7 +139,7 @@ class Cylinder: Renderable {
 
         // Create bitangent buffer.
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), bufferIds[3])
-        glBufferData(GLenum(GL_ARRAY_BUFFER), sizeof(Float) * size, b, GLenum(GL_STATIC_DRAW))
+        glBufferData(GLenum(GL_ARRAY_BUFFER), MemoryLayout<Float>.size * size, b, GLenum(GL_STATIC_DRAW))
 
         // Create bitangent attribute array.
         glEnableVertexAttribArray(vertexBitangentLocation)
@@ -147,7 +147,7 @@ class Cylinder: Renderable {
 
         // Create normal buffer.
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), bufferIds[4])
-        glBufferData(GLenum(GL_ARRAY_BUFFER), sizeof(Float) * size, n, GLenum(GL_STATIC_DRAW))
+        glBufferData(GLenum(GL_ARRAY_BUFFER), MemoryLayout<Float>.size * size, n, GLenum(GL_STATIC_DRAW))
 
         // Create normal attribute array.
         glEnableVertexAttribArray(vertexNormalLocation)

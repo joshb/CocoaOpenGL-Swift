@@ -27,7 +27,7 @@ import Foundation
 import GLKit
 
 class ShaderProgram {
-    private var program: GLuint
+    fileprivate var program: GLuint
 
     init() {
         program = glCreateProgram()
@@ -37,7 +37,7 @@ class ShaderProgram {
         glDeleteProgram(program)
     }
 
-    func attachShader(file: String, withType type: GLint) {
+    func attachShader(_ file: String, withType type: GLint) {
         if let shader = compileShader(file, withType: GLenum(type)) {
             glAttachShader(program, shader)
 
@@ -59,13 +59,13 @@ class ShaderProgram {
         }
     }
 
-    func getAttributeLocation(name: String) -> GLuint? {
-        let tmp = glGetAttribLocation(program, name.cStringUsingEncoding(NSUTF8StringEncoding)!)
+    func getAttributeLocation(_ name: String) -> GLuint? {
+        let tmp = glGetAttribLocation(program, name.cString(using: String.Encoding.utf8)!)
         return tmp < 0 ? nil : GLuint(tmp)
     }
 
-    func getUniformLocation(name: String) -> GLuint? {
-        let tmp = glGetUniformLocation(program, name.cStringUsingEncoding(NSUTF8StringEncoding)!)
+    func getUniformLocation(_ name: String) -> GLuint? {
+        let tmp = glGetUniformLocation(program, name.cString(using: String.Encoding.utf8)!)
         return tmp < 0 ? nil : GLuint(tmp)
     }
 
@@ -73,31 +73,31 @@ class ShaderProgram {
         glUseProgram(program)
     }
 
-    private func getGLShaderInfoLog(shader: GLuint) -> String {
+    fileprivate func getGLShaderInfoLog(_ shader: GLuint) -> String {
         // Get the length of the info log.
         var length: GLint = 0
         glGetShaderiv(shader, GLenum(GL_INFO_LOG_LENGTH), &length)
 
         // Retrieve the info log.
-        var str = [GLchar](count: Int(length) + 1, repeatedValue: GLchar(0))
+        var str = [GLchar](repeating: GLchar(0), count: Int(length) + 1)
         var size: GLsizei = 0
         glGetShaderInfoLog(shader, GLsizei(length), &size, &str)
 
-        return String.fromCString(str)!
+        return String(cString: str)
     }
 
-    private func compileShader(file: String, withType type: GLenum) -> GLuint? {
+    fileprivate func compileShader(_ file: String, withType type: GLenum) -> GLuint? {
         // Load the shader source.
-        let path = NSBundle.mainBundle().resourcePath! + "/" + file
+        let path = Bundle.main.resourcePath! + "/" + file
         let source = try? String(contentsOfFile: path,
-                            encoding: NSASCIIStringEncoding)
+                            encoding: String.Encoding.ascii)
         if source == nil {
             NSLog("Unable to load %@", file)
             return nil
         }
 
-        let cSource = source!.cStringUsingEncoding(NSASCIIStringEncoding)
-        var glcSource = UnsafePointer<GLchar> (cSource!)
+        let cSource = source!.cString(using: String.Encoding.ascii)
+        var glcSource = UnsafePointer<GLchar>? (cSource!)
 
         // Compile the shader.
         let shader = glCreateShader(type)

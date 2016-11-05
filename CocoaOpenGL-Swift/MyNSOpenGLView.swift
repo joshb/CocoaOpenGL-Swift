@@ -29,7 +29,7 @@ class MyNSOpenGLView: NSOpenGLView
 {
     var projectionMatrix = Matrix4()
 
-    private var trackingArea: NSTrackingArea?
+    fileprivate var trackingArea: NSTrackingArea?
 
     override func awakeFromNib()
     {
@@ -44,7 +44,7 @@ class MyNSOpenGLView: NSOpenGLView
         ]
 
         let format = NSOpenGLPixelFormat(attributes: attr)
-        let context = NSOpenGLContext(format: format!, shareContext: nil)
+        let context = NSOpenGLContext(format: format!, share: nil)
 
         self.openGLContext = context
         self.openGLContext?.makeCurrentContext()
@@ -66,7 +66,7 @@ class MyNSOpenGLView: NSOpenGLView
         }
 
         // Create new tracking area.
-        let options: NSTrackingAreaOptions = [NSTrackingAreaOptions.MouseMoved, NSTrackingAreaOptions.ActiveWhenFirstResponder]
+        let options: NSTrackingAreaOptions = [NSTrackingAreaOptions.mouseMoved, NSTrackingAreaOptions.activeWhenFirstResponder]
         trackingArea = NSTrackingArea(rect: frame, options: options, owner: self, userInfo: nil)
     }
 
@@ -74,7 +74,7 @@ class MyNSOpenGLView: NSOpenGLView
         return true
     }
 
-    override func keyDown(theEvent: NSEvent) {
+    override func keyDown(with theEvent: NSEvent) {
         // Close the window when the escape key is pressed.
         if theEvent.keyCode == 0x35 {
             window?.close()

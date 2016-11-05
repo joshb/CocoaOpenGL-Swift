@@ -27,9 +27,9 @@ import Foundation
 import GLKit
 
 class Texture {
-    private(set) var textureId: GLuint
-    private(set) var width: UInt
-    private(set) var height: UInt
+    fileprivate(set) var textureId: GLuint
+    fileprivate(set) var width: UInt
+    fileprivate(set) var height: UInt
 
     init(textureId: GLuint, width: UInt, height: UInt) {
         self.textureId = textureId
@@ -41,21 +41,21 @@ class Texture {
         glDeleteTextures(1, &textureId)
     }
 
-    static func loadFromFile(filePath: String) -> Texture? {
-        let fullPath = NSBundle.mainBundle().resourcePath! + "/" + filePath
-        let dataProvider = CGDataProviderCreateWithFilename(fullPath)
+    static func loadFromFile(_ filePath: String) -> Texture? {
+        let fullPath = Bundle.main.resourcePath! + "/" + filePath
+        let dataProvider = CGDataProvider(filename: fullPath)
         if dataProvider == nil {
             return nil
         }
 
-        let image = CGImageCreateWithPNGDataProvider(dataProvider!, nil, false, CGColorRenderingIntent.RenderingIntentDefault)
-        let imageData = CGDataProviderCopyData(CGImageGetDataProvider(image))
+        let image = CGImage(pngDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: false, intent: CGColorRenderingIntent.defaultIntent)
+        let imageData = image?.dataProvider?.data
 
         // Get the image data, dimensions, and number of components.
         let data = CFDataGetBytePtr(imageData)
-        let width = UInt(CGImageGetWidth(image))
-        let height = UInt(CGImageGetHeight(image))
-        let numComponents = CGImageGetBitsPerPixel(image) / 8
+        let width = UInt((image?.width)!)
+        let height = UInt((image?.height)!)
+        let numComponents = (image?.bitsPerPixel)! / 8
 
         // Determine the GL texture format based on the number of components.
         var format: GLint

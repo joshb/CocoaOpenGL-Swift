@@ -33,7 +33,7 @@ struct Matrix4 {
         0.0, 0.0, 0.0, 1.0
     ]
 
-    static func perspectiveMatrix(fov fov: Float, aspect: Float, near: Float, far: Float) -> Matrix4 {
+    static func perspectiveMatrix(fov: Float, aspect: Float, near: Float, far: Float) -> Matrix4 {
         var matrix = Matrix4()
         let f = 1.0 / tanf(fov / 2.0)
 
@@ -47,7 +47,7 @@ struct Matrix4 {
         return matrix
     }
 
-    static func translationMatrix(x x: Float, y: Float, z: Float) -> Matrix4 {
+    static func translationMatrix(x: Float, y: Float, z: Float) -> Matrix4 {
         var matrix = Matrix4()
 
         matrix.matrix[12] = x
@@ -57,7 +57,7 @@ struct Matrix4 {
         return matrix
     }
 
-    static func rotationMatrix(angle angle: Float, x: Float, y: Float, z: Float) -> Matrix4 {
+    static func rotationMatrix(angle: Float, x: Float, y: Float, z: Float) -> Matrix4 {
         var matrix = Matrix4()
 
         let c = cosf(angle)
@@ -88,9 +88,7 @@ struct Matrix4 {
 func * (left: Matrix4, right: Matrix4) -> Matrix4 {
     let m1 = left.matrix
     let m2 = right.matrix
-    var m = [Float](count: 16, repeatedValue: 0.0)
-
-    Matrix4.translationMatrix(x: 1, y: 2, z: 3)
+    var m = [Float](repeating: 0.0, count: 16)
 
     m[ 0] = m1[ 0]*m2[ 0] + m1[ 1]*m2[ 4] + m1[ 2]*m2[ 8] + m1[ 3]*m2[12]
     m[ 1] = m1[ 0]*m2[ 1] + m1[ 1]*m2[ 5] + m1[ 2]*m2[ 9] + m1[ 3]*m2[13]
