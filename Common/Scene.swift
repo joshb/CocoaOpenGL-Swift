@@ -23,8 +23,11 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import Foundation
-import GLKit
+#if os(iOS)
+    import OpenGLES
+#else
+    import OpenGL
+#endif
 
 let NUM_LIGHTS = 3
 

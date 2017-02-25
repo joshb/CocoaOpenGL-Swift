@@ -24,7 +24,12 @@
  */
 
 import Foundation
-import GLKit
+import CoreGraphics
+#if os(iOS)
+    import OpenGLES
+#else
+    import OpenGL
+#endif
 
 class Texture {
     fileprivate(set) var textureId: GLuint

@@ -24,13 +24,20 @@
  */
 
 import Foundation
-import GLKit
+#if os(iOS)
+    import OpenGLES
+#else
+    import OpenGL
+#endif
 
 class ShaderProgram {
     fileprivate var program: GLuint
 
     init() {
         program = glCreateProgram()
+        if program == 0 {
+            NSLog("Program creation failed")
+        }
     }
 
     deinit {
@@ -89,8 +96,7 @@ class ShaderProgram {
     fileprivate func compileShader(_ file: String, withType type: GLenum) -> GLuint? {
         // Load the shader source.
         let path = Bundle.main.resourcePath! + "/" + file
-        let source = try? String(contentsOfFile: path,
-                            encoding: String.Encoding.ascii)
+        let source = try? String(contentsOfFile: path, encoding: String.Encoding.ascii)
         if source == nil {
             NSLog("Unable to load %@", file)
             return nil
@@ -109,10 +115,7 @@ class ShaderProgram {
         var result: GLint = 0
         glGetShaderiv(shader, GLenum(GL_COMPILE_STATUS), &result)
         if result == GL_FALSE {
-            // Get the shader info log.
-            glGetShaderiv(shader, GLenum(GL_INFO_LOG_LENGTH), &length)
-
-            NSLog("Shader compilation failed: %@", getGLShaderInfoLog(shader))
+            NSLog("Compilation of %@ failed: %@", file, getGLShaderInfoLog(shader))
             glDeleteShader(shader)
             return nil
         }
