@@ -58,7 +58,7 @@ class MyNSOpenGLView: NSOpenGLView
 
         // Create projection matrix.
         let aspectRatio = Float(frame.size.width) / Float(frame.size.height)
-        projectionMatrix = Matrix4.perspectiveMatrix(fov: M_PI_F / 4.0, aspect: aspectRatio, near: 0.1, far: 200.0)
+        projectionMatrix = Matrix4.perspectiveMatrix(fov: Float.pi / 4.0, aspect: aspectRatio, near: 0.1, far: 200.0)
 
         // Remove existing tracking area if necessary.
         if trackingArea != nil {

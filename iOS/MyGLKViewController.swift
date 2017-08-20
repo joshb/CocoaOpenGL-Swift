@@ -81,7 +81,7 @@ class MyGLKViewController: GLKViewController {
     override func glkView(_ view: GLKView, drawIn rect: CGRect) {
         // Create projection matrix.
         let aspectRatio = Float(rect.size.width / rect.size.height)
-        let projectionMatrix = Matrix4.perspectiveMatrix(fov: M_PI_F / 2.0, aspect: aspectRatio, near: 0.1, far: 200.0)
+        let projectionMatrix = Matrix4.perspectiveMatrix(fov: Float.pi / 2.0, aspect: aspectRatio, near: 0.1, far: 200.0)
 
         // Render the scene.
         glClear(GLbitfield(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT))

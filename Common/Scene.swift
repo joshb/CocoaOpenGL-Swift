@@ -91,10 +91,10 @@ class Scene {
 
     func cycle(_ secondsElapsed: Float) {
         // Update the light positions.
-        lightRotation += (M_PI_F / 4.0) * secondsElapsed
+        lightRotation += (Float.pi / 4.0) * secondsElapsed
         for i in 0..<NUM_LIGHTS {
             let radius: Float = 1.75
-            let r = (((M_PI_F * 2.0) / Float(NUM_LIGHTS)) * Float(i)) + lightRotation
+            let r = (((Float.pi * 2.0) / Float(NUM_LIGHTS)) * Float(i)) + lightRotation
 
             lightPosition[i * 3 + 0] = cosf(r) * radius
             lightPosition[i * 3 + 1] = cosf(r) * sinf(r)
@@ -102,7 +102,7 @@ class Scene {
         }
 
         // Update the camera position.
-        cameraRotation -= (M_PI_F / 16.0) * secondsElapsed
+        cameraRotation -= (Float.pi / 16.0) * secondsElapsed
         cameraPosition[0] = sinf(cameraRotation) * 4.0
         cameraPosition[1] = 0.0
         cameraPosition[2] = cosf(cameraRotation) * 4.0

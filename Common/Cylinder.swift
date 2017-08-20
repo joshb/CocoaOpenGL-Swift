@@ -26,8 +26,6 @@
 import Foundation
 import GLKit
 
-let M_PI_F = Float(M_PI)
-
 class Cylinder: Renderable {
     fileprivate var numVertices = 0
     fileprivate var vertexArrayId: GLuint = 0
@@ -48,8 +46,8 @@ class Cylinder: Renderable {
         var b = [Float](repeating: 0.0, count: size)
         var n = [Float](repeating: 0.0, count: size)
         for i in 0...divisions {
-            let r1 = ((M_PI_F * 2.0) / divisionsf) * Float(i)
-            let r2 = r1 + M_PI_F / 2.0
+            let r1 = ((Float.pi * 2.0) / divisionsf) * Float(i)
+            let r2 = r1 + Float.pi / 2.0
 
             let c1 = cosf(r1)
             let s1 = sinf(r1)
