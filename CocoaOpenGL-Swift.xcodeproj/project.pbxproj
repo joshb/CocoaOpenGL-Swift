@@ -37,29 +37,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D9AFA3A1F74BCA400CA5FF4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0DE685721E4FD31E0089BF2F /* CocoaOpenGL-Swift-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CocoaOpenGL-Swift-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DE685881E4FD3CC0089BF2F /* Cylinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cylinder.swift; path = Common/Cylinder.swift; sourceTree = "<group>"; };
-		0DE685891E4FD3CC0089BF2F /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Matrix4.swift; path = Common/Matrix4.swift; sourceTree = "<group>"; };
-		0DE6858A1E4FD3CC0089BF2F /* normalmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = normalmap.png; path = Common/normalmap.png; sourceTree = "<group>"; };
-		0DE6858B1E4FD3CC0089BF2F /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Renderable.swift; path = Common/Renderable.swift; sourceTree = "<group>"; };
-		0DE6858C1E4FD3CC0089BF2F /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene.swift; path = Common/Scene.swift; sourceTree = "<group>"; };
-		0DE6858D1E4FD3CC0089BF2F /* ShaderProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShaderProgram.swift; path = Common/ShaderProgram.swift; sourceTree = "<group>"; };
-		0DE6858E1E4FD3CC0089BF2F /* Texture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Texture.swift; path = Common/Texture.swift; sourceTree = "<group>"; };
-		0DE685961E4FD3E10089BF2F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = iOS/AppDelegate.swift; sourceTree = "<group>"; };
-		0DE685971E4FD3E10089BF2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = iOS/Assets.xcassets; sourceTree = "<group>"; };
-		0DE685981E4FD3E10089BF2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = iOS/Info.plist; sourceTree = "<group>"; };
-		0DE685991E4FD3E10089BF2F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = iOS/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0DE6859A1E4FD3E10089BF2F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = iOS/Main.storyboard; sourceTree = "<group>"; };
-		0DE6859B1E4FD3E10089BF2F /* MyGLKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyGLKViewController.swift; path = iOS/MyGLKViewController.swift; sourceTree = "<group>"; };
-		0DE6859C1E4FD3E10089BF2F /* shader.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = shader.fs; path = iOS/shader.fs; sourceTree = "<group>"; };
-		0DE6859D1E4FD3E10089BF2F /* shader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = shader.vs; path = iOS/shader.vs; sourceTree = "<group>"; };
-		0DE685A61E4FD3EF0089BF2F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = macOS/AppDelegate.swift; sourceTree = "<group>"; };
-		0DE685A71E4FD3EF0089BF2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = macOS/Images.xcassets; sourceTree = "<group>"; };
-		0DE685A81E4FD3EF0089BF2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = macOS/Info.plist; sourceTree = "<group>"; };
-		0DE685A91E4FD3EF0089BF2F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = macOS/MainMenu.xib; sourceTree = "<group>"; };
-		0DE685AA1E4FD3EF0089BF2F /* MyNSOpenGLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyNSOpenGLView.swift; path = macOS/MyNSOpenGLView.swift; sourceTree = "<group>"; };
-		0DE685AB1E4FD3EF0089BF2F /* shader.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = shader.fs; path = macOS/shader.fs; sourceTree = "<group>"; };
-		0DE685AC1E4FD3EF0089BF2F /* shader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = shader.vs; path = macOS/shader.vs; sourceTree = "<group>"; };
+		0DE685881E4FD3CC0089BF2F /* Cylinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cylinder.swift; sourceTree = "<group>"; };
+		0DE685891E4FD3CC0089BF2F /* Matrix4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix4.swift; sourceTree = "<group>"; };
+		0DE6858A1E4FD3CC0089BF2F /* normalmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normalmap.png; sourceTree = "<group>"; };
+		0DE6858B1E4FD3CC0089BF2F /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
+		0DE6858C1E4FD3CC0089BF2F /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		0DE6858D1E4FD3CC0089BF2F /* ShaderProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShaderProgram.swift; sourceTree = "<group>"; };
+		0DE6858E1E4FD3CC0089BF2F /* Texture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
+		0DE685961E4FD3E10089BF2F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0DE685971E4FD3E10089BF2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0DE685981E4FD3E10089BF2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE685991E4FD3E10089BF2F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0DE6859A1E4FD3E10089BF2F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0DE6859B1E4FD3E10089BF2F /* MyGLKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGLKViewController.swift; sourceTree = "<group>"; };
+		0DE6859C1E4FD3E10089BF2F /* shader.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
+		0DE6859D1E4FD3E10089BF2F /* shader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
+		0DE685A61E4FD3EF0089BF2F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0DE685A71E4FD3EF0089BF2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0DE685A81E4FD3EF0089BF2F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE685A91E4FD3EF0089BF2F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		0DE685AA1E4FD3EF0089BF2F /* MyNSOpenGLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNSOpenGLView.swift; sourceTree = "<group>"; };
+		0DE685AB1E4FD3EF0089BF2F /* shader.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.fs; sourceTree = "<group>"; };
+		0DE685AC1E4FD3EF0089BF2F /* shader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
 		0DE685B81E4FD4BC0089BF2F /* CocoaOpenGL-Swift-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CocoaOpenGL-Swift-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +85,7 @@
 		0DE685631E4FD28A0089BF2F = {
 			isa = PBXGroup;
 			children = (
+				0D9AFA3A1F74BCA400CA5FF4 /* README.md */,
 				0DE685851E4FD3A20089BF2F /* Common */,
 				0DE685861E4FD3A70089BF2F /* iOS */,
 				0DE685871E4FD3B00089BF2F /* macOS */,
@@ -111,7 +113,7 @@
 				0DE6858D1E4FD3CC0089BF2F /* ShaderProgram.swift */,
 				0DE6858E1E4FD3CC0089BF2F /* Texture.swift */,
 			);
-			name = Common;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		0DE685861E4FD3A70089BF2F /* iOS */ = {
@@ -126,7 +128,7 @@
 				0DE6859C1E4FD3E10089BF2F /* shader.fs */,
 				0DE6859D1E4FD3E10089BF2F /* shader.vs */,
 			);
-			name = iOS;
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		0DE685871E4FD3B00089BF2F /* macOS */ = {
@@ -140,7 +142,7 @@
 				0DE685AB1E4FD3EF0089BF2F /* shader.fs */,
 				0DE685AC1E4FD3EF0089BF2F /* shader.vs */,
 			);
-			name = macOS;
+			path = macOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +189,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				TargetAttributes = {
 					0DE685711E4FD31E0089BF2F = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -196,6 +198,7 @@
 					};
 					0DE685B71E4FD4BC0089BF2F = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -284,12 +287,18 @@
 		0DE685681E4FD28A0089BF2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -309,12 +318,18 @@
 		0DE685691E4FD28A0089BF2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -481,7 +496,8 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -528,7 +544,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
