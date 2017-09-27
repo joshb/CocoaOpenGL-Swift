@@ -66,7 +66,7 @@ class MyNSOpenGLView: NSOpenGLView
         }
 
         // Create new tracking area.
-        let options: NSTrackingAreaOptions = [NSTrackingAreaOptions.mouseMoved, NSTrackingAreaOptions.activeWhenFirstResponder]
+        let options: NSTrackingArea.Options = [NSTrackingArea.Options.mouseMoved, NSTrackingArea.Options.activeWhenFirstResponder]
         trackingArea = NSTrackingArea(rect: frame, options: options, owner: self, userInfo: nil)
     }
 

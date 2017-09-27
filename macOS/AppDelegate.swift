@@ -50,11 +50,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         scene = Scene()
 
         // Create a timer to render.
-        timer = Timer(timeInterval: 1.0 / 60.0,
-                        target: self,
-                        selector: #selector(AppDelegate.timerFireMethod(_:)),
-                        userInfo: nil,
-                        repeats: true)
+        timer = Timer(timeInterval: 1.0 / 60.0, repeats: true, block: timerFireMethod)
         RunLoop.current.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
     }
 
