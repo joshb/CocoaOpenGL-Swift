@@ -32,9 +32,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var view: MyNSOpenGLView!
 
-    fileprivate var timer: Timer!
-    fileprivate var scene: Scene!
-    fileprivate var ticks: UInt64 = AppDelegate.getTicks()
+    private var timer: Timer!
+    private var scene: Scene!
+    private var ticks: UInt64 = AppDelegate.getTicks()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Do some GL setup.
@@ -72,7 +72,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         scene.cycle(secondsElapsed)
     }
 
-    fileprivate class func getTicks() -> UInt64 {
+    private class func getTicks() -> UInt64 {
         var t = timeval()
         gettimeofday(&t, nil)
         return UInt64(t.tv_sec * 1000) + UInt64(t.tv_usec / 1000)

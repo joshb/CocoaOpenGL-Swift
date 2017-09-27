@@ -32,9 +32,9 @@ import CoreGraphics
 #endif
 
 class Texture {
-    fileprivate(set) var textureId: GLuint
-    fileprivate(set) var width: UInt
-    fileprivate(set) var height: UInt
+    private(set) var textureId: GLuint
+    private(set) var width: UInt
+    private(set) var height: UInt
 
     init(textureId: GLuint, width: UInt, height: UInt) {
         self.textureId = textureId

@@ -29,8 +29,8 @@ import OpenGLES
 class MyGLKViewController: GLKViewController {
     var context: EAGLContext? = nil
 
-    fileprivate var scene: Scene!
-    fileprivate var ticks: UInt64 = MyGLKViewController.getTicks()
+    private var scene: Scene!
+    private var ticks: UInt64 = MyGLKViewController.getTicks()
 
     deinit {
         if EAGLContext.current() === self.context {
@@ -95,7 +95,7 @@ class MyGLKViewController: GLKViewController {
         scene.cycle(secondsElapsed)
     }
 
-    fileprivate class func getTicks() -> UInt64 {
+    private class func getTicks() -> UInt64 {
         var t = timeval()
         gettimeofday(&t, nil)
         return UInt64(t.tv_sec * 1000) + UInt64(t.tv_usec / 1000)

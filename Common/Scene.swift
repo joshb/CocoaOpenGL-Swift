@@ -32,24 +32,24 @@
 let NUM_LIGHTS = 3
 
 class Scene {
-    fileprivate var program: ShaderProgram
-    fileprivate var programProjectionMatrixLocation: GLuint
-    fileprivate var programModelviewMatrixLocation: GLuint
-    fileprivate var programCameraPositionLocation: GLuint
-    fileprivate var programLightPositionLocation: GLuint
-    fileprivate var programLightColorLocation: GLuint
+    private var program: ShaderProgram
+    private var programProjectionMatrixLocation: GLuint
+    private var programModelviewMatrixLocation: GLuint
+    private var programCameraPositionLocation: GLuint
+    private var programLightPositionLocation: GLuint
+    private var programLightColorLocation: GLuint
 
-    fileprivate var lightPosition = [Float](repeating: 0.0, count: NUM_LIGHTS * 3)
-    fileprivate var lightColor: [Float] = [1.0, 0.0, 0.0,
+    private var lightPosition = [Float](repeating: 0.0, count: NUM_LIGHTS * 3)
+    private var lightColor: [Float] = [1.0, 0.0, 0.0,
                                        0.0, 1.0, 0.0,
                                        0.0, 0.0, 1.0]
-    fileprivate var lightRotation: Float = 0.0
+    private var lightRotation: Float = 0.0
 
-    fileprivate var normalmap: Texture?
-    fileprivate var renderable: Renderable
+    private var normalmap: Texture?
+    private var renderable: Renderable
 
-    fileprivate var cameraRotation: Float = 0.0
-    fileprivate var cameraPosition: [Float] = [0.0, 0.0, 4.0]
+    private var cameraRotation: Float = 0.0
+    private var cameraPosition: [Float] = [0.0, 0.0, 4.0]
 
     init() {
         // Create the program, attach shaders, and link.

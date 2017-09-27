@@ -31,7 +31,7 @@ import Foundation
 #endif
 
 class ShaderProgram {
-    fileprivate var program: GLuint
+    private var program: GLuint
 
     init() {
         program = glCreateProgram()
@@ -80,7 +80,7 @@ class ShaderProgram {
         glUseProgram(program)
     }
 
-    fileprivate func getGLShaderInfoLog(_ shader: GLuint) -> String {
+    private func getGLShaderInfoLog(_ shader: GLuint) -> String {
         // Get the length of the info log.
         var length: GLint = 0
         glGetShaderiv(shader, GLenum(GL_INFO_LOG_LENGTH), &length)
@@ -93,7 +93,7 @@ class ShaderProgram {
         return String(cString: str)
     }
 
-    fileprivate func compileShader(_ file: String, withType type: GLenum) -> GLuint? {
+    private func compileShader(_ file: String, withType type: GLenum) -> GLuint? {
         // Load the shader source.
         let path = Bundle.main.resourcePath! + "/" + file
         let source = try? String(contentsOfFile: path, encoding: String.Encoding.ascii)

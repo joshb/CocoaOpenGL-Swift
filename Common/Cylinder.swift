@@ -27,9 +27,9 @@ import Foundation
 import GLKit
 
 class Cylinder: Renderable {
-    fileprivate var numVertices = 0
-    fileprivate var vertexArrayId: GLuint = 0
-    fileprivate var bufferIds = [GLuint](repeating: 0, count: 5)
+    private var numVertices = 0
+    private var vertexArrayId: GLuint = 0
+    private var bufferIds = [GLuint](repeating: 0, count: 5)
 
     init(program: ShaderProgram, numberOfDivisions divisions: Int) {
         let divisionsf = Float(divisions)

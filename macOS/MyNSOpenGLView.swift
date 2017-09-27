@@ -29,7 +29,7 @@ class MyNSOpenGLView: NSOpenGLView
 {
     var projectionMatrix = Matrix4()
 
-    fileprivate var trackingArea: NSTrackingArea?
+    private var trackingArea: NSTrackingArea?
 
     override func awakeFromNib()
     {
