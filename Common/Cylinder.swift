@@ -39,7 +39,6 @@ class Cylinder: Renderable {
         let tcSize = numVertices * 2
 
         // Generate vertex data.
-        //let p = UnsafeMutablePointer<Float> (malloc(sizeof(Float) * size))
         var p = [Float](repeating: 0.0, count: size)
         var tc = [Float](repeating: 0.0, count: tcSize)
         var t = [Float](repeating: 0.0, count: size)
