@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D64549E1F814EBD007C0286 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D64549C1F814EBD007C0286 /* Main.storyboard */; };
+		0D6454A01F814EBD007C0286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D64549F1F814EBD007C0286 /* Assets.xcassets */; };
+		0D6454A51F814FC6007C0286 /* Cylinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE685881E4FD3CC0089BF2F /* Cylinder.swift */; };
+		0D6454A61F814FC6007C0286 /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE685891E4FD3CC0089BF2F /* Matrix4.swift */; };
+		0D6454A71F814FC6007C0286 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6858B1E4FD3CC0089BF2F /* Renderable.swift */; };
+		0D6454A81F814FC6007C0286 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6858C1E4FD3CC0089BF2F /* Scene.swift */; };
+		0D6454A91F814FC6007C0286 /* ShaderProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6858D1E4FD3CC0089BF2F /* ShaderProgram.swift */; };
+		0D6454AA1F814FC6007C0286 /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6858E1E4FD3CC0089BF2F /* Texture.swift */; };
+		0D6454AB1F814FC6007C0286 /* MyGLKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6859B1E4FD3E10089BF2F /* MyGLKViewController.swift */; };
+		0D6454AD1F816FCB007C0286 /* shader.fs in Resources */ = {isa = PBXBuildFile; fileRef = 0DE6859C1E4FD3E10089BF2F /* shader.fs */; };
+		0D6454AE1F816FCB007C0286 /* shader.vs in Resources */ = {isa = PBXBuildFile; fileRef = 0DE6859D1E4FD3E10089BF2F /* shader.vs */; };
+		0D6454AF1F816FE0007C0286 /* normalmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DE6858A1E4FD3CC0089BF2F /* normalmap.png */; };
+		0D6454B01F817014007C0286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE685961E4FD3E10089BF2F /* AppDelegate.swift */; };
 		0DE6858F1E4FD3CC0089BF2F /* Cylinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE685881E4FD3CC0089BF2F /* Cylinder.swift */; };
 		0DE685901E4FD3CC0089BF2F /* Matrix4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE685891E4FD3CC0089BF2F /* Matrix4.swift */; };
 		0DE685911E4FD3CC0089BF2F /* normalmap.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DE6858A1E4FD3CC0089BF2F /* normalmap.png */; };
@@ -37,6 +50,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D6454961F814EBD007C0286 /* CocoaOpenGL-Swift-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CocoaOpenGL-Swift-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D64549D1F814EBD007C0286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0D64549F1F814EBD007C0286 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0D6454A11F814EBD007C0286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D9AFA3A1F74BCA400CA5FF4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0DE685721E4FD31E0089BF2F /* CocoaOpenGL-Swift-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CocoaOpenGL-Swift-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE685881E4FD3CC0089BF2F /* Cylinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cylinder.swift; sourceTree = "<group>"; };
@@ -65,6 +82,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0D6454931F814EBD007C0286 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DE6856F1E4FD31E0089BF2F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,6 +106,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D6454971F814EBD007C0286 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				0D64549C1F814EBD007C0286 /* Main.storyboard */,
+				0D64549F1F814EBD007C0286 /* Assets.xcassets */,
+				0D6454A11F814EBD007C0286 /* Info.plist */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
 		0DE685631E4FD28A0089BF2F = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +123,7 @@
 				0DE685851E4FD3A20089BF2F /* Common */,
 				0DE685861E4FD3A70089BF2F /* iOS */,
 				0DE685871E4FD3B00089BF2F /* macOS */,
+				0D6454971F814EBD007C0286 /* tvOS */,
 				0DE685731E4FD31E0089BF2F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +133,7 @@
 			children = (
 				0DE685721E4FD31E0089BF2F /* CocoaOpenGL-Swift-macOS.app */,
 				0DE685B81E4FD4BC0089BF2F /* CocoaOpenGL-Swift-iOS.app */,
+				0D6454961F814EBD007C0286 /* CocoaOpenGL-Swift-tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +184,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0D6454951F814EBD007C0286 /* CocoaOpenGL-Swift-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D6454A41F814EBD007C0286 /* Build configuration list for PBXNativeTarget "CocoaOpenGL-Swift-tvOS" */;
+			buildPhases = (
+				0D6454921F814EBD007C0286 /* Sources */,
+				0D6454931F814EBD007C0286 /* Frameworks */,
+				0D6454941F814EBD007C0286 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CocoaOpenGL-Swift-tvOS";
+			productName = "CocoaOpenGL-Swift-tvOS";
+			productReference = 0D6454961F814EBD007C0286 /* CocoaOpenGL-Swift-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		0DE685711E4FD31E0089BF2F /* CocoaOpenGL-Swift-macOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DE6857D1E4FD31E0089BF2F /* Build configuration list for PBXNativeTarget "CocoaOpenGL-Swift-macOS" */;
@@ -188,9 +241,13 @@
 		0DE685641E4FD28A0089BF2F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				TargetAttributes = {
+					0D6454951F814EBD007C0286 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
 					0DE685711E4FD31E0089BF2F = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0900;
@@ -218,11 +275,24 @@
 			targets = (
 				0DE685711E4FD31E0089BF2F /* CocoaOpenGL-Swift-macOS */,
 				0DE685B71E4FD4BC0089BF2F /* CocoaOpenGL-Swift-iOS */,
+				0D6454951F814EBD007C0286 /* CocoaOpenGL-Swift-tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0D6454941F814EBD007C0286 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D6454AF1F816FE0007C0286 /* normalmap.png in Resources */,
+				0D6454AD1F816FCB007C0286 /* shader.fs in Resources */,
+				0D6454AE1F816FCB007C0286 /* shader.vs in Resources */,
+				0D6454A01F814EBD007C0286 /* Assets.xcassets in Resources */,
+				0D64549E1F814EBD007C0286 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DE685701E4FD31E0089BF2F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,6 +321,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0D6454921F814EBD007C0286 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D6454B01F817014007C0286 /* AppDelegate.swift in Sources */,
+				0D6454A51F814FC6007C0286 /* Cylinder.swift in Sources */,
+				0D6454A61F814FC6007C0286 /* Matrix4.swift in Sources */,
+				0D6454A71F814FC6007C0286 /* Renderable.swift in Sources */,
+				0D6454A81F814FC6007C0286 /* Scene.swift in Sources */,
+				0D6454A91F814FC6007C0286 /* ShaderProgram.swift in Sources */,
+				0D6454AA1F814FC6007C0286 /* Texture.swift in Sources */,
+				0D6454AB1F814FC6007C0286 /* MyGLKViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DE6856E1E4FD31E0089BF2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,7 +368,99 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		0D64549C1F814EBD007C0286 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D64549D1F814EBD007C0286 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		0D6454A21F814EBD007C0286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = tvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joshbeam.CocoaOpenGL-Swift-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		0D6454A31F814EBD007C0286 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = tvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joshbeam.CocoaOpenGL-Swift-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		0DE685681E4FD28A0089BF2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -370,6 +547,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -426,6 +604,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -473,6 +652,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -529,6 +709,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -556,6 +737,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0D6454A41F814EBD007C0286 /* Build configuration list for PBXNativeTarget "CocoaOpenGL-Swift-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D6454A21F814EBD007C0286 /* Debug */,
+				0D6454A31F814EBD007C0286 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0DE685671E4FD28A0089BF2F /* Build configuration list for PBXProject "CocoaOpenGL-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

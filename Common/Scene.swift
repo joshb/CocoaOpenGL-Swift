@@ -23,7 +23,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#if os(iOS)
+#if os(iOS) || os(tvOS)
     import OpenGLES
 #else
     import OpenGL

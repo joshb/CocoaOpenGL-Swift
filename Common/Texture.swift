@@ -25,7 +25,7 @@
 
 import Foundation
 import CoreGraphics
-#if os(iOS)
+#if os(iOS) || os(tvOS)
     import OpenGLES
 #else
     import OpenGL

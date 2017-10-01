@@ -1,7 +1,7 @@
 CocoaOpenGL-Swift
 =================
 
-This is a simple example of using Swift to create an OpenGL application for macOS and iOS. It features a rotating, normal mapped cylinder that is illuminated by three moving point lights of different colors.
+This is a simple example of using Swift to create an OpenGL application for macOS, iOS, and tvOS. It features a rotating, normal mapped cylinder that is illuminated by three moving point lights of different colors.
 
 ![CocoaOpenGL-Swift](CocoaOpenGL-Swift.png)
 
