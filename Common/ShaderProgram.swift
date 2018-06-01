@@ -24,10 +24,10 @@
  */
 
 import Foundation
-#if os(iOS) || os(tvOS)
-    import OpenGLES
+#if os(macOS)
+import OpenGL
 #else
-    import OpenGL
+import OpenGLES
 #endif
 
 class ShaderProgram {
@@ -98,7 +98,7 @@ class ShaderProgram {
         let path = Bundle.main.resourcePath! + "/" + file
         let source = try? String(contentsOfFile: path, encoding: String.Encoding.ascii)
         if source == nil {
-            NSLog("Unable to load %@", file)
+            NSLog("Unable to load \(file)")
             return nil
         }
 
@@ -107,7 +107,7 @@ class ShaderProgram {
 
         // Compile the shader.
         let shader = glCreateShader(type)
-        var length = GLint((source!).characters.count)
+        var length = GLint((source!.utf8).count)
         glShaderSource(shader, 1, &glcSource, &length)
         glCompileShader(shader)
 
@@ -115,7 +115,7 @@ class ShaderProgram {
         var result: GLint = 0
         glGetShaderiv(shader, GLenum(GL_COMPILE_STATUS), &result)
         if result == GL_FALSE {
-            NSLog("Compilation of %@ failed: %@", file, getGLShaderInfoLog(shader))
+            NSLog("Compilation of \(file) failed: \(getGLShaderInfoLog(shader))")
             glDeleteShader(shader)
             return nil
         }
