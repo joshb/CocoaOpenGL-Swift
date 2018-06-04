@@ -24,7 +24,11 @@
  */
 
 import Foundation
-import GLKit
+#if os(macOS)
+import OpenGL
+#else
+import OpenGLES
+#endif
 
 class Cylinder: Renderable {
     private var numVertices = 0

@@ -23,10 +23,11 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#if os(iOS) || os(tvOS)
-    import OpenGLES
+import Foundation
+#if os(macOS)
+import OpenGL
 #else
-    import OpenGL
+import OpenGLES
 #endif
 
 let NUM_LIGHTS = 3

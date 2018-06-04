@@ -24,11 +24,13 @@
  */
 
 import Foundation
+#if !os(Android)
 import CoreGraphics
-#if os(iOS) || os(tvOS)
-    import OpenGLES
+#endif
+#if os(macOS)
+import OpenGL
 #else
-    import OpenGL
+import OpenGLES
 #endif
 
 class Texture {
@@ -48,6 +50,7 @@ class Texture {
 
     static func loadFromFile(_ filePath: String) -> Texture? {
         let fullPath = Bundle.main.resourcePath! + "/" + filePath
+        #if !os(Android)
         let dataProvider = CGDataProvider(filename: fullPath)
         if dataProvider == nil {
             return nil
@@ -71,6 +74,15 @@ class Texture {
             default:
                 return nil
         }
+        #else
+        // workaround when CoreGraphics is not available
+        let imageData = NSData(contentsOfFile: fullPath)!
+        withExtendedLifetime(imageData) {}
+        let data = imageData.bytes
+        let width = UInt(512)
+        let height = UInt(512)
+        let format = GL_RGBA
+        #endif
 
         // Generate and bind texture.
         var textureId: GLuint = 0
