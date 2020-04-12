@@ -77,11 +77,11 @@ class Scene {
 
         // Enable the program and set uniform variables.
         program.use()
-        glUniformMatrix4fv(GLint(programProjectionMatrixLocation), 1, GLboolean(GL_FALSE), UnsafePointer<GLfloat>(projectionMatrix.matrix))
-        glUniformMatrix4fv(GLint(programModelviewMatrixLocation), 1, GLboolean(GL_FALSE), UnsafePointer<GLfloat>(modelviewMatrix.matrix))
-        glUniform3fv(GLint(programCameraPositionLocation), 1, UnsafePointer<GLfloat>(cameraPosition))
-        glUniform3fv(GLint(programLightPositionLocation), GLint(NUM_LIGHTS), UnsafePointer<GLfloat>(lightPosition))
-        glUniform3fv(GLint(programLightColorLocation), GLint(NUM_LIGHTS), UnsafePointer<GLfloat>(lightColor))
+        glUniformMatrix4fv(GLint(programProjectionMatrixLocation), 1, GLboolean(GL_FALSE), projectionMatrix.matrix)
+        glUniformMatrix4fv(GLint(programModelviewMatrixLocation), 1, GLboolean(GL_FALSE), modelviewMatrix.matrix)
+        glUniform3fv(GLint(programCameraPositionLocation), 1, cameraPosition)
+        glUniform3fv(GLint(programLightPositionLocation), GLint(NUM_LIGHTS), lightPosition)
+        glUniform3fv(GLint(programLightColorLocation), GLint(NUM_LIGHTS), lightColor)
 
         // Render the object.
         renderable.render()
