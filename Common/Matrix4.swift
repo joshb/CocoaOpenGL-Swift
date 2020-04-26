@@ -74,7 +74,7 @@ struct Matrix4 {
         matrix.matrix[0] = x * x * ci + c
         matrix.matrix[1] = xy + zs
         matrix.matrix[2] = xz - ys
-        matrix.matrix[4] = xy - xz
+        matrix.matrix[4] = xy - zs
         matrix.matrix[5] = y * y * ci + c
         matrix.matrix[6] = yz + xs
         matrix.matrix[8] = xz + ys
