@@ -7,7 +7,7 @@ This is a simple example of using Swift to create an OpenGL application for macO
 
 Aside from the vertex and fragment shaders written in GLSL, all of the application code is written in Swift.
 
-This application was developed by [Josh Beam](http://joshbeam.com/) and is distributed under the BSD-style license shown below.
+This application was developed by [Josh Beam](https://joshbeam.com/) and is distributed under the BSD-style license shown below.
 
 License
 -------
